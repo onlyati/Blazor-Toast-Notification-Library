@@ -64,5 +64,3 @@ ToastController.PushNotification(ToastNotifyItemType.Error, "Error notificatioin
 
 Notification pops up in the upper right corner and disappear after 5 seconds.
 More configuration options is planned in the future.
-
-
