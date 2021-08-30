@@ -13,7 +13,7 @@ namespace ToastNotify.Service
     {
         public static void AddToastNotify(this IServiceCollection service)
         {
-            service.AddSingleton<ToastNotifyController>();
+            service.AddScoped<ToastNotifyController>();
         }
     }
 }

@@ -44,7 +44,7 @@ If you use Blazor WASM app, then insert this line onto program.cs:
 
 In case of Blazor server app you must paste onto `Pages/_Host.cshtml`. In case of Blazor WASM app, you must paste onto `wwwroot/index.html`. Both case it must be between header tags.
 ```html
-<link href="_content/ToastNotify/ToastNotify.css" rel="stylesheet" />
+<link href="_content/OnlyAti.Blazor.ToastNotify/ToastNotify.css" rel="stylesheet" />
 ```
 
 At the end, you must put the controller into your MainLayout file:
