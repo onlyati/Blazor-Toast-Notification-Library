@@ -62,5 +62,5 @@ ToastController.PushNotification(ToastNotifyItemType.Warning, "Warning notificat
 ToastController.PushNotification(ToastNotifyItemType.Error, "Error notificatioin was sent due to something error: there is nothing to see here...");
 ```
 
-Notification pops up in the upper right corner and disappear after 5 seconds.
+Notification pops up in the upper right corner (its style depends from the type) and disappear after 5 seconds.
 More configuration options is planned in the future.
