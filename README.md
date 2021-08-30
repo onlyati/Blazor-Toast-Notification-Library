@@ -16,7 +16,7 @@ Download OnlyAti.Blazor.ToastNotify from nuget repository. In the `_import.razor
 ```
 
 If you use Blazor server app, then insert this line onto Startup.cs:
-```
+```csharp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
