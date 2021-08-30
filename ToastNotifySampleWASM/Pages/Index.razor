@@ -1,0 +1,18 @@
+﻿@page "/"
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+
+<button class="btn btn-primary" @onclick="AddInfo">Push info</button>
+<button class="btn btn-primary" @onclick="AddWarning">Push warning</button>
+<button class="btn btn-primary" @onclick="AddError">Push error</button>
+
+@code {
+    private void AddInfo() => ToastController.PushNotification(ToastNotifyItemType.Info, "Info notificatioin");
+    private void AddWarning() => ToastController.PushNotification(ToastNotifyItemType.Warning, "Warning notificatioin");
+    private void AddError() => ToastController.PushNotification(ToastNotifyItemType.Error, "Error notificatioin was sent due to something error: there is nothing to see here...");
+}

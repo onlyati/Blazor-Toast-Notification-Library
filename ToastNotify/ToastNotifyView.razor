@@ -1,0 +1,12 @@
+﻿@implements IDisposable
+
+<div class="onlyati-toastnotify-box">
+    @if(ToastController?.Lista != null)
+    {
+        @foreach (var item in ToastController.Lista)
+        {
+            <div class="@item.DivClass onlyati-toastnotify-push-animation"><p>@item.Text</p></div>
+            <div style="height: 10px; background-color: transparent;"></div>
+        }
+    }
+</div>

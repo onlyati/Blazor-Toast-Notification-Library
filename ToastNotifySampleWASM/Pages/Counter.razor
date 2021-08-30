@@ -1,0 +1,23 @@
+﻿@page "/counter"
+
+<h1>Counter</h1>
+
+<p>Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<button class="btn btn-primary" @onclick="AddInfo">Push info</button>
+<button class="btn btn-primary" @onclick="AddWarning">Push warning</button>
+<button class="btn btn-primary" @onclick="AddError">Push error</button>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+
+    private void AddInfo() => ToastController.PushNotification(ToastNotifyItemType.Info, "Info notificatioin");
+    private void AddWarning() => ToastController.PushNotification(ToastNotifyItemType.Warning, "Info notificatioin");
+    private void AddError() => ToastController.PushNotification(ToastNotifyItemType.Error, "Info notificatioin");
+}

@@ -1,0 +1,136 @@
+﻿/*
+    Rules for toast notification boxes
+    ----------------------------------
+*/
+.onlyati-toastnotify-box {
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 400px;
+}
+
+.onlyati-toastnotify-info-item,
+.onlyati-toastnotify-warning-item,
+.onlyati-toastnotify-error-item {
+    position: relative;
+    display: table-row;
+    min-height: 44px;
+    width: 400px;
+}
+
+    .onlyati-toastnotify-info-item::before,
+    .onlyati-toastnotify-warning-item::before,
+    .onlyati-toastnotify-error-item::before {
+        display: table-cell;
+        font-weight: bold;
+        color: white;
+        min-height: 44px;
+        width: 44px;
+        background-repeat: no-repeat;
+        background-position-x: 6px;
+        background-position-y: 6px;
+        background-size: 32px;
+    }
+
+    .onlyati-toastnotify-info-item p,
+    .onlyati-toastnotify-warning-item p,
+    .onlyati-toastnotify-error-item p {
+        margin: 10px 20px;
+        text-align: justify;
+        width: 316px;
+    }
+
+.onlyati-toastnotify-error-item {
+    color: #D8000C;
+    background-color: #FFD2D2;
+}
+
+    .onlyati-toastnotify-error-item::before {
+        content: "";
+        background-color: #D8000C;
+        background-image: url("error_sign_white.png");
+    }
+
+.onlyati-toastnotify-warning-item {
+    color: rgb(156,87,0);
+    background-color: rgb(255,235,156);
+}
+
+    .onlyati-toastnotify-warning-item::before {
+        content: "";
+        background-color: rgb(156,87,0);
+        background-image: url("warning_sign_white.png");
+    }
+
+.onlyati-toastnotify-info-item {
+    color: rgb(0,97,0);
+    background-color: rgb(198,239,206);
+}
+
+    .onlyati-toastnotify-info-item::before {
+        content: "";
+        background-color: rgb(0,97,0);
+        background-image: url("info_sign_white.png");
+    }
+
+/*
+    Rules for animation
+    -------------------
+*/
+
+@-webkit-keyframes onlyati-toast-popup {
+    0% { 
+        opacity: 0; 
+        right: 60px;
+    }
+    100% { 
+        opacity: 1; 
+        right: 0px;
+    }
+}
+
+@-moz-keyframes onlyati-toast-popup {
+    0% {
+        opacity: 0;
+        right: 60px;
+    }
+
+    100% {
+        opacity: 1;
+        right: 0px;
+    }
+}
+
+@-o-keyframes onlyati-toast-popup {
+    0% {
+        opacity: 0;
+        right: 60px;
+    }
+
+    100% {
+        opacity: 1;
+        right: 0px;
+    }
+}
+
+@keyframes onlyati-toast-popup {
+    0% {
+        opacity: 0;
+        right: 60px;
+    }
+
+    100% {
+        opacity: 1;
+        right: 0px;
+    }
+}
+
+.onlyati-toastnotify-push-animation {
+    animation-name: onlyati-toast-popup;
+    animation-duration: 0.15s;
+    animation-timing-function: linear;
+}
