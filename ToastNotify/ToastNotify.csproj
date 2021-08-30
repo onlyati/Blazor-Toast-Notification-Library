@@ -2,6 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <Version>0.0.1</Version>
+    <Authors>OnlyAti</Authors>
+    <Company />
+    <Description>This is a tost notification for Blazor server and WASM applications</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/onlyati/Blazor-Toast-Notification-Library</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/onlyati/Blazor-Toast-Notification-Library</RepositoryUrl>
+    <RepositoryType>github</RepositoryType>
+    <PackageId>OnlyAti.Blazor.ToastNotify</PackageId>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   
