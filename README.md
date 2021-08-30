@@ -5,7 +5,7 @@ This is a javascript free toast notification function for Blazor server and wasm
 - ToastNotifySampleServer: sample implementation for Blazor Server app
 - ToastNotiySampleWASM: sample implementation for Blazor WASM app
 
-## Usage
+## Installation
 Download OnlyAti.Blazor.ToastNotify from nuget repository. In the `_import.razor` file, you must insert:
 ```csharp
 @using ToastNotify;
@@ -46,4 +46,23 @@ In case of Blazor server app you must paste onto `Pages/_Host.cshtml`. In case o
 ```html
 <link href="_content/ToastNotify/ToastNotify.css" rel="stylesheet" />
 ```
+
+At the end, you must put the controller into your MainLayout file:
+```
+<ToastNotifyView ToastController="@ToastController" />
+```
+
+You can check samples for both situation in this repo.
+
+## Usage
+It is simple to use due to DI. You can just call function to push message:
+```csharp
+ToastController.PushNotification(ToastNotifyItemType.Info, "Info notificatioin");
+ToastController.PushNotification(ToastNotifyItemType.Warning, "Warning notificatioin");
+ToastController.PushNotification(ToastNotifyItemType.Error, "Error notificatioin was sent due to something error: there is nothing to see here...");
+```
+
+Notification pops up in the upper right corner and disappear after 5 seconds.
+More configuration options is planned in the future.
+
 
