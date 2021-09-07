@@ -3,7 +3,7 @@
     ----------------------------------
 */
 .onlyati-toastnotify-box {
-    position: absolute;
+    position: fixed;
     top: 60px;
     right: 30px;
     font-size: 20px;
